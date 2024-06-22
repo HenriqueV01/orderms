@@ -20,7 +20,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @GetMapping("/customer/{customerId}/orders")
+    @GetMapping("/customers/{customerId}/orders")
     public ResponseEntity<ApiResponse<OrderResponse>> listOrders(
             @PathVariable("customerId") Long customerId,
             @RequestParam(name="page", defaultValue="0") Integer page,
